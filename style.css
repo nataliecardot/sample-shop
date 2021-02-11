@@ -92,6 +92,7 @@ nav ul li {
   justify-content: space-between;
   align-items: center;
   max-width: 980px;
+  margin-top: 8px;
 }
 
 .mid-nav-options {
@@ -174,7 +175,7 @@ nav ul li {
 .breadcrumbs-container {
   background: #ffdd00;
   margin-top: 7px;
-  padding: 7px 0;
+  padding: 5px 0;
 }
 
 ul.breadcrumbs {
