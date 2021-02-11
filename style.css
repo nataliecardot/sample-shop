@@ -102,6 +102,7 @@ nav ul li {
   font-size: 20px;
   font-weight: bold;
   font-family: 'Roboto Condensed', sans-serif;
+  margin-right: 5px;
 }
 
 /* DROPDOWN BUTTON - https://www.w3schools.com/howto/howto_js_dropdown.asp */
@@ -115,6 +116,11 @@ nav ul li {
   font-size: 11px;
   letter-spacing: 0.5px;
   margin-left: 90px;
+}
+
+/* For search option in mid nav, drop icon changes to search icon */
+.drop-btn .fa-search {
+  display: none;
 }
 
 .drop-btn:focus {
@@ -386,6 +392,10 @@ ul.breadcrumbs li,
     display: none;
   }
 
+  .mid-nav-heavy-text {
+    font-size: 18px;
+  }
+
   .mid-nav-container p {
     display: none;
   }
@@ -417,6 +427,19 @@ ul.breadcrumbs li,
     margin: 0;
     color: #fff;
     width: 100%;
+  }
+
+  .drop-btn .fa-search {
+    display: inline-block;
+  }
+
+  .drop-btn.search .fa-caret-down {
+    display: none;
+  }
+
+  /* For search option, drop icon changes to search icon */
+  .drop-btn .fa-search {
+    display: inline-block;
   }
 
   .breadcrumbs-container {
