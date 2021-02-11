@@ -95,11 +95,11 @@ nav ul li {
 .mid-nav-container p {
   color: var(--deep-red-theme);
   text-align: right;
-  margin-left: 90px;
+  margin-left: 150px;
 }
 
 .mid-nav-heavy-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-family: 'Roboto Condensed', sans-serif;
   margin-right: 5px;
@@ -115,7 +115,7 @@ nav ul li {
   text-align: left;
   font-size: 11px;
   letter-spacing: 0.5px;
-  margin-left: 90px;
+  margin-left: 65px;
 }
 
 /* For search option in mid nav, drop icon changes to search icon */
@@ -165,6 +165,7 @@ nav ul li {
 
 .breadcrumbs-container {
   background: #ffdd00;
+  margin-top: 7px;
   padding: 7px 0;
 }
 
@@ -251,8 +252,9 @@ ul.breadcrumbs li + li::before {
 /* "Spare Parts" text */
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 0.5em;
+  margin-top: 50px;
 }
 
 /* "Filter Parts" text */
@@ -390,10 +392,6 @@ ul.breadcrumbs li,
 
   p.announcement-desktop {
     display: none;
-  }
-
-  .mid-nav-heavy-text {
-    font-size: 18px;
   }
 
   .mid-nav-container p {
