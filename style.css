@@ -456,6 +456,7 @@ ul.breadcrumbs li,
 
   .mid-nav-container {
     background: #b10127;
+    margin-top: 0;
   }
 
   .drop-btn {
