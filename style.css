@@ -237,6 +237,7 @@ ul.breadcrumbs li + li::before {
   font-size: 13px;
   margin: 0;
   display: block;
+  /* Padding as a percentage is based on parent element's width */
   padding: 15px 20% 15px 15px;
   color: var(--main-font-color);
 }
