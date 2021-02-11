@@ -29,9 +29,9 @@ a {
   text-decoration: none;
 }
 
-nav {
-  display: flex;
-  align-items: center;
+nav .fa-bars {
+  color: #fff;
+  display: none;
 }
 
 .top-nav-bg {
@@ -58,6 +58,15 @@ nav {
 
 .top-nav-container p {
   margin: 0.64em 0;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  list-style-type: none;
 }
 
 /* Text in top nav */
@@ -315,6 +324,53 @@ ul.breadcrumbs li,
     background-color: var(--deep-red-theme);
   }
 
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  nav .fa-bars {
+    display: block;
+    position: absolute;
+    left: 15px;
+    padding: 10px;
+  }
+
+  nav ul.active {
+    display: none;
+  }
+
+  nav ul {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 60px;
+    background: var(--deep-red-theme);
+    z-index: 1;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .top-nav-container {
+    flex-direction: column;
+  }
+
+  .top-nav-container a {
+    margin-left: 0;
+    display: block;
+    width: 100%;
+  }
+
   .desktop-logo {
     display: none;
   }
@@ -325,6 +381,10 @@ ul.breadcrumbs li,
 
   .mid-nav-container p {
     display: none;
+  }
+
+  h1 {
+    margin-left: 10px;
   }
 
   .side-nav-container {

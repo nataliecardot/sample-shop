@@ -10,24 +10,37 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/0736fbfc73.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <div class="top-nav-bg">
         <div class="top-nav-container container">
           <!-- Mobile view logo -->
-          <img src="img/logo-mobile.png" alt="Shop logo" class="mobile-logo">
-
           <p class="announcement-desktop"><strong class="free-shipping">FREE SHIPPING</strong> ON ORDERS OF $30 OR MORE</p>
 
           <nav>
-            <a href="#">ABOUT</a>
-            <a href="#">HOW TO BUY</a>
-            <a href="#">ORDER A CATALOG</a>
-            <a href="#">CONTACT</a>
-            <a href="#">VIEW ORDER (35)</a>
+            <ul class="active">
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">HOW TO BUY</a></li>
+              <li><a href="#">ORDER A CATALOG</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">VIEW ORDER (35)</a></li>
+            </ul>
+
+            <!-- Toggler icon -->
+            <i class="fas fa-bars"></i>
+
+            <!-- Mobile view logo -->
+            <img src="img/logo-mobile.png" alt="Shop logo" class="mobile-logo">
+
           </nav>
         </div>
       </div>
