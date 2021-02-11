@@ -34,7 +34,7 @@ nav {
   align-items: center;
 }
 
-.top-nav {
+.top-nav-bg {
   background: url('img/top-nav-bg.jpg');
   background-repeat: no-repeat;
   /* Resizes image to ensure it's fully visible */
@@ -47,7 +47,7 @@ nav {
   align-items: center;
 }
 
-.top-nav a,
+.top-nav-container a,
 .top-nav-container p {
   letter-spacing: 0.5px;
   font-size: 11px;
@@ -59,7 +59,7 @@ nav {
   color: #fff;
 }
 
-.top-nav a {
+.top-nav-bg a {
   margin-left: 30px;
   font-weight: bold;
 }
@@ -302,7 +302,7 @@ ul.breadcrumbs li,
     padding-bottom: 0;
   }
 
-  .top-nav {
+  .top-nav-bg {
     background: none;
   }
 
@@ -367,7 +367,7 @@ ul.breadcrumbs li,
 
 /* Tablets - same as Bootstrap 4 col-md */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .top-nav {
+  .top-nav-bg {
     background: none;
     background-color: var(--deep-red-theme);
     padding: 10px;
@@ -378,7 +378,7 @@ ul.breadcrumbs li,
     justify-content: center;
   }
 
-  .top-nav a {
+  .top-nav-bg a {
     color: #fff;
   }
 
