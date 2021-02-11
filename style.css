@@ -49,15 +49,19 @@ nav .fa-bars {
   align-items: center;
 }
 
-.top-nav-container a,
+.top-nav-container ul a,
 .top-nav-container p {
   letter-spacing: 0.5px;
   font-size: 11px;
   color: var(--top-nav-font-color);
 }
 
-.top-nav-container p {
-  margin: 0.64em 0;
+.top-nav-container ul a:hover {
+  color: #fff;
+}
+
+.top-nav-container p.announcement-desktop {
+  margin: 0.65em;
 }
 
 nav ul {
@@ -67,6 +71,8 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
+  /* Makes it centered in nav bg image - since there's some extra space above text in li bounding box */
+  margin-bottom: 3px;
 }
 
 /* Text in top nav */
@@ -74,7 +80,7 @@ nav ul li {
   color: #fff;
 }
 
-.top-nav-container a {
+.top-nav-container ul a {
   margin-left: 30px;
   font-weight: bold;
 }
@@ -140,7 +146,7 @@ nav ul li {
   background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* Without this it's behind product image on mobile. */
+  /* Without this it's behind product image on mobile */
   z-index: 1;
 }
 
@@ -181,12 +187,19 @@ ul.breadcrumbs li a {
   font-size: 12px;
 }
 
+ul.breadcrumbs li a:hover {
+  font-weight: 600;
+}
+
 /* Adding pseudoelement (\00a0 is a nonbreaking space) to adjacent sibling of li in breadcrumbs list */
 ul.breadcrumbs li + li::before {
   padding: 8px;
   content: '/\00a0';
 }
 
+/* Have to set this a element to display none or it prevents margin for .announcement-desktop from applying */
+/* Have to put class on a element rather than doing a .mobile-logo since .mobile-logo is set to display-none and therefore not detected */
+.mobile-logo-a-link,
 .mobile-logo {
   display: none;
 }
@@ -334,7 +347,7 @@ ul.breadcrumbs li,
     background-color: var(--deep-red-theme);
   }
 
-  .top-nav-container a {
+  .top-nav-container ul a {
     color: #fff;
   }
 
@@ -380,7 +393,7 @@ ul.breadcrumbs li,
     flex-direction: column;
   }
 
-  .top-nav-container a {
+  .top-nav-container ul a {
     margin-left: 0;
     display: block;
     width: 100%;
@@ -406,8 +419,18 @@ ul.breadcrumbs li,
     display: none;
   }
 
+  .mobile-logo-a-link {
+    display: inline;
+  }
+
   .mobile-logo {
-    display: inline-block;
+    display: block;
+    /* Otherwise it's bigger than parent a element */
+    width: 100%;
+  }
+
+  /* Sizes logo. Logo needs to be set to 100% of this a element */
+  .mobile-logo-a-link {
     width: 30%;
   }
 
@@ -489,7 +512,7 @@ ul.breadcrumbs li,
     justify-content: center;
   }
 
-  .top-nav-container a {
+  .top-nav-container ul a {
     color: #fff;
   }
 
