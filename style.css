@@ -134,6 +134,8 @@ nav ul li {
   background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Without this it's behind product image on mobile. */
+  z-index: 1;
 }
 
 /* Links inside the dropdown */
@@ -324,6 +326,10 @@ ul.breadcrumbs li,
     background-color: var(--deep-red-theme);
   }
 
+  .top-nav-container a {
+    color: #fff;
+  }
+
   nav {
     position: relative;
     display: flex;
@@ -351,7 +357,8 @@ ul.breadcrumbs li,
     position: absolute;
     top: 60px;
     background: var(--deep-red-theme);
-    z-index: 1;
+    /* Without this, ul is behind product image. dropdown-content has z-index of 1 */
+    z-index: 2;
     margin-left: 0;
     padding-left: 0;
   }
@@ -384,7 +391,7 @@ ul.breadcrumbs li,
   }
 
   h1 {
-    margin-left: 10px;
+    display: none;
   }
 
   .side-nav-container {
@@ -393,23 +400,32 @@ ul.breadcrumbs li,
 
   .mobile-logo {
     display: inline-block;
+    width: 30%;
+  }
+
+  .mid-nav-options {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
   }
 
   .mid-nav-container {
-    justify-content: center;
+    background: #b10127;
   }
 
   .drop-btn {
-    margin-left: 10px;
+    margin: 0;
+    color: #fff;
+    width: 100%;
   }
 
   .breadcrumbs-container {
     margin-top: 0;
-    padding: 15px;
+    padding: 10px 18px;
   }
 
   ul.breadcrumbs li + li::before {
-    padding: 5px;
+    padding: 3px;
   }
 
   ul.breadcrumbs li a {
@@ -431,6 +447,11 @@ ul.breadcrumbs li,
 
   .product {
     border: none;
+  }
+
+  .product-name {
+    font-size: 18px;
+    padding: 17px;
   }
 }
 
