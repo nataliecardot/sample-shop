@@ -39,6 +39,8 @@ nav {
   background-repeat: no-repeat;
   /* Resizes image to ensure it's fully visible */
   background-size: contain;
+  /* Needed so it doesn't move around based on content within it (such as changing p tag margin) */
+  min-height: 30px;
 }
 
 .top-nav-container {
@@ -52,6 +54,10 @@ nav {
   letter-spacing: 0.5px;
   font-size: 11px;
   color: var(--top-nav-font-color);
+}
+
+.top-nav-container p {
+  margin: 0.64em 0;
 }
 
 /* Text in top nav */
@@ -141,7 +147,6 @@ nav {
 /* END DROPDOWN BUTTON */
 
 .breadcrumbs-container {
-  margin-top: 10px;
   background: #ffdd00;
   padding: 7px 0;
 }
@@ -306,6 +311,10 @@ ul.breadcrumbs li,
     background: none;
   }
 
+  .top-nav-container {
+    background-color: var(--deep-red-theme);
+  }
+
   .desktop-logo {
     display: none;
   }
@@ -378,7 +387,7 @@ ul.breadcrumbs li,
     justify-content: center;
   }
 
-  .top-nav-bg a {
+  .top-nav-container a {
     color: #fff;
   }
 
