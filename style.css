@@ -237,8 +237,7 @@ ul.breadcrumbs li + li::before {
   font-size: 13px;
   margin: 0;
   display: block;
-  padding: 15px;
-  width: 80%;
+  padding: 15px 20% 15px 15px;
   color: var(--main-font-color);
 }
 
