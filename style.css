@@ -27,6 +27,8 @@ body {
 
 a {
   text-decoration: none;
+  /* Needed for when .product-name a tag text is wrapped */
+  cursor: pointer;
 }
 
 nav .fa-bars {
