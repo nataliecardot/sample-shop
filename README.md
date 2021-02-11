@@ -1,1 +1,1 @@
-colors:
+# Sample Shop
