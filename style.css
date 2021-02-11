@@ -1,0 +1,305 @@
+/* Yellow color for breadcrumbs: #ffdd00 */
+/* Top nav link color - desktop:  */
+
+:root {
+  --deep-red-theme: #82001c;
+  --top-nav-font-color: #ff8fa7;
+  --main-font-color: #464646;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-font-color);
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 30px;
+}
+
+.container {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav {
+  background: url('img/top-nav-bg.jpg');
+  background-repeat: no-repeat;
+  /* Resizes image to ensure it's fully visible */
+  background-size: contain;
+}
+
+.top-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav a,
+.top-nav-container p {
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  color: var(--top-nav-font-color);
+}
+
+/* Text in top nav */
+.free-shipping {
+  color: #fff;
+}
+
+.top-nav a {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.mid-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 980px;
+}
+
+.mid-nav-options {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* "Give us a call" text */
+.mid-nav-container p {
+  color: var(--deep-red-theme);
+  text-align: right;
+  margin-left: 90px;
+}
+
+.mid-nav-heavy-text {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* DROPDOWN BUTTON - https://www.w3schools.com/howto/howto_js_dropdown.asp */
+.drop-btn {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--deep-red-theme);
+  padding: 10px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin-left: 90px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* END DROPDOWN BUTTON */
+
+.breadcrumbs-container {
+  margin-top: 10px;
+  background: #ffdd00;
+  padding: 7px 0;
+}
+
+ul.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+ul.breadcrumbs li a {
+  color: var(--main-font-color);
+  font-size: 12px;
+}
+
+/* Adding pseudoelement (\00a0 is a nonbreaking space) to adjacent sibling of li in breadcrumbs list */
+ul.breadcrumbs li + li::before {
+  padding: 8px;
+  content: '/\00a0';
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.main-content-container {
+  display: flex;
+}
+
+.products {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+}
+
+.product {
+  border: 1px solid #c9c9c9;
+  min-height: 172px;
+}
+
+.product > img {
+  height: 145px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+  padding: 10px;
+}
+
+/* "Spare Parts" text */
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 40px;
+  margin-bottom: 0.5em;
+}
+
+/* "Filter Parts" text */
+h2 {
+  margin: 0 0 2em;
+  font-size: 14px;
+}
+
+.side-nav-container {
+  width: 16%;
+  margin-right: 4%;
+}
+
+ul.side-nav {
+  /* Removing default padding-inline-start of 40px */
+  padding: 0;
+}
+
+ul.side-nav li {
+  padding: 5px 0;
+  border-bottom: solid 1px #c9c9c9;
+}
+
+ul.side-nav li:last-of-type {
+  border-bottom: 0;
+}
+
+ul.side-nav li a {
+  color: var(--main-font-color);
+  font-size: 14px;
+}
+
+.side-nav li a:active,
+.side-nav li a.active {
+  font-weight: bold;
+}
+
+i.fa-angle-right {
+  float: right;
+}
+
+ul.breadcrumbs li,
+.side-nav li {
+  list-style-type: none;
+}
+
+/* Media queries */
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .top-nav {
+    background: none;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  p.announcement-desktop {
+    display: none;
+  }
+
+  .mid-nav-container p {
+    display: none;
+  }
+
+  .side-nav-container {
+    display: none;
+  }
+
+  mobile-logo {
+    display: inline-block;
+  }
+
+  .mid-nav-container {
+    justify-content: center;
+  }
+
+  .drop-btn {
+    margin-left: 10px;
+  }
+
+  .breadcrumbs-container {
+    margin-top: 0;
+    padding: 15px;
+  }
+
+  ul.breadcrumbs li + li::before {
+    padding: 5px;
+  }
+
+  ul.breadcrumbs li a {
+    padding-right: 4px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .main-content-container {
+    width: 95%;
+  }
+
+  .products {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product {
+    /* border: none; */
+  }
+}
