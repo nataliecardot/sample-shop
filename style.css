@@ -244,7 +244,7 @@ ul.breadcrumbs li + li::before {
   color: var(--deep-red-theme);
   font-weight: bold;
   background: #fff;
-  /* Set to display block in media query hover */
+  /* Set to display block in hover media query */
   display: none;
   cursor: pointer;
   /* https://medium.com/front-end-weekly/absolute-centering-in-css-ea3a9d0ad72e */
