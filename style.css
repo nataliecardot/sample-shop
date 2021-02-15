@@ -169,7 +169,7 @@ nav ul li {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-  animation: fadeIn 0.4;
+  animation: fadeIn 0.5s;
 }
 
 /* END DROPDOWN BUTTON */
