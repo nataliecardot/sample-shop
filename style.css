@@ -163,11 +163,13 @@ nav ul li {
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
+  transition: background-color 0.3s;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  animation: fadeIn 0.5s;
 }
 
 /* END DROPDOWN BUTTON */
