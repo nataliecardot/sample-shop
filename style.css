@@ -290,8 +290,10 @@ h2 {
 }
 
 .side-nav li {
-  padding: 5px 0;
+  padding: 20px 0;
   border-bottom: solid 1px #c9c9c9;
+  display: flex;
+  justify-content: space-between;
 }
 
 .side-nav li:last-of-type {
@@ -305,7 +307,6 @@ h2 {
 
 .side-nav i {
   display: none;
-  float: right;
 }
 
 .side-nav li:hover i,
