@@ -60,6 +60,7 @@ nav .fa-bars {
 
 .top-nav-container ul a:hover {
   color: #fff;
+  transition: 0.3s;
 }
 
 .top-nav-container p.announcement-desktop {
