@@ -335,11 +335,23 @@ ul.breadcrumbs li,
 @media (hover: hover) {
   .product:hover .overlay {
     display: block;
+    animation: fadeIn 0.6s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   .product:hover img,
   .product:hover a {
-    opacity: 0.5;
+    opacity: 0.6;
+    transition: opacity 0.3s;
   }
 
   ul.side-nav li a:hover {
@@ -508,6 +520,7 @@ ul.breadcrumbs li,
 
   .product {
     border: none;
+    transition: display 0.8s;
   }
 
   .product-name {
