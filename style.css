@@ -296,6 +296,10 @@ h2 {
   justify-content: space-between;
 }
 
+.side-nav li:hover {
+  cursor: pointer;
+}
+
 .side-nav li:last-of-type {
   border-bottom: 0;
 }
